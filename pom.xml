@@ -19,11 +19,14 @@
 
         <leaf-release.version>0.1.0</leaf-release.version>
 
+        <leaf-authn.version>0.1.0</leaf-authn.version>
         <leaf-common.version>0.1.0</leaf-common.version>
         <leaf-config.version>0.1.0</leaf-config.version>
+        <leaf-dal.version>0.1.0</leaf-dal.version>
+        <leaf-expose.version>0.1.0</leaf-expose.version>
         <leaf-logging.version>0.1.0</leaf-logging.version>
         <leaf-modeling.version>0.1.0</leaf-modeling.version>
-        <leaf-authn.version>0.1.0</leaf-authn.version>
+        <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
     <licenses>
