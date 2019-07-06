@@ -2,9 +2,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>io.codeleaf.build</groupId>
+        <artifactId>build-release</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
     <groupId>io.codeleaf.release</groupId>
     <artifactId>release</artifactId>
-    <version>0.1.0</version>
 
     <packaging>pom</packaging>
 
@@ -14,18 +19,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+        <git.repo>${project.artifactId}</git.repo>
+        <git.version>${project.version}</git.version>
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <leaf-release.version>0.1.0</leaf-release.version>
-
         <leaf-authn.version>0.1.0</leaf-authn.version>
+        <leaf-build.version>0.1.0</leaf-build.version>
         <leaf-common.version>0.1.0</leaf-common.version>
         <leaf-config.version>0.1.0</leaf-config.version>
         <leaf-expose.version>0.1.0</leaf-expose.version>
         <leaf-logging.version>0.1.0</leaf-logging.version>
         <leaf-modeling.version>0.1.0</leaf-modeling.version>
         <leaf-oerm.version>0.1.0</leaf-oerm.version>
+        <leaf-release.version>0.1.0</leaf-release.version>
         <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
@@ -52,29 +60,10 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/codeleaf-io/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:ssh://github.com/codeleaf-io/${project.artifactId}.git</developerConnection>
-        <url>https://github.com/codeleaf-io/${project.artifactId}/tree/release/${project.version}</url>
+        <connection>scm:git:git://github.com/codeleaf-io/${git.repo}.git</connection>
+        <developerConnection>scm:git:ssh://github.com/codeleaf-io/${git.repo}.git</developerConnection>
+        <url>https://github.com/codeleaf-io/${git.repo}/tree/release/${git.version}</url>
     </scm>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.21.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <compilerArgument>-Xlint:all</compilerArgument>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
     <distributionManagement>
         <snapshotRepository>
@@ -86,62 +75,5 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <skipTests>false</skipTests>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
