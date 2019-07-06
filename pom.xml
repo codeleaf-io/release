@@ -38,6 +38,10 @@
         <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
+    <modules>
+        <module>deps</module>
+    </modules>
+
     <licenses>
         <license>
             <name>GNU General Public License, Version 3</name>

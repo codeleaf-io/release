@@ -1,0 +1,82 @@
+<project>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.codeleaf.release</groupId>
+        <artifactId>release</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
+    <artifactId>release-deps</artifactId>
+
+    <packaging>pom</packaging>
+
+    <name>Release Dependency Management Project</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.codeleaf.authn</groupId>
+                <artifactId>authn</artifactId>
+                <version>${leaf-authn.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.codeleaf.common</groupId>
+                <artifactId>common</artifactId>
+                <version>${leaf-common.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.codeleaf.config</groupId>
+                <artifactId>config</artifactId>
+                <version>${leaf-config.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--
+            <dependency>
+                <groupId>io.codeleaf.expose</groupId>
+                <artifactId>expose</artifactId>
+                <version>${leaf-expose.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            -->
+            <dependency>
+                <groupId>io.codeleaf.logging</groupId>
+                <artifactId>logging</artifactId>
+                <version>${leaf-logging.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.codeleaf.modeling</groupId>
+                <artifactId>modeling</artifactId>
+                <version>${leaf-modeling.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.codeleaf.oerm</groupId>
+                <artifactId>oerm</artifactId>
+                <version>${leaf-oerm.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--
+            <dependency>
+                <groupId>io.codeleaf.service</groupId>
+                <artifactId>service</artifactId>
+                <version>${leaf-service.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            -->
+        </dependencies>
+    </dependencyManagement>
+
+</project>
