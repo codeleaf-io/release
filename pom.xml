@@ -10,6 +10,7 @@
 
     <groupId>io.codeleaf.release</groupId>
     <artifactId>release</artifactId>
+    <version>0.1.0</version>
 
     <packaging>pom</packaging>
 
@@ -26,14 +27,14 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <leaf-authn.version>0.1.0</leaf-authn.version>
-        <leaf-build.version>0.1.0</leaf-build.version>
+        <leaf-build.version>${project.parent.version}</leaf-build.version>
         <leaf-common.version>0.1.0</leaf-common.version>
         <leaf-config.version>0.1.0</leaf-config.version>
         <leaf-expose.version>0.1.0</leaf-expose.version>
         <leaf-logging.version>0.1.0</leaf-logging.version>
         <leaf-modeling.version>0.1.0</leaf-modeling.version>
         <leaf-oerm.version>0.1.0</leaf-oerm.version>
-        <leaf-release.version>0.1.0</leaf-release.version>
+        <leaf-release.version>${project.version}</leaf-release.version>
         <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
