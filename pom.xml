@@ -38,9 +38,14 @@
         <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
-    <modules>
-        <module>deps</module>
-    </modules>
+    <profiles>
+        <profile>
+            <id>deps</id>
+            <modules>
+                <module>deps</module>
+            </modules>
+        </profile>
+    </profiles>
 
     <licenses>
         <license>
