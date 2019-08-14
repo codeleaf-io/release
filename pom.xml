@@ -26,8 +26,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <leaf-authn.version>0.1.0</leaf-authn.version>
-        <leaf-authz.version>0.1.0</leaf-authz.version>
         <leaf-build.version>${project.parent.version}</leaf-build.version>
         <leaf-common.version>0.1.0</leaf-common.version>
         <leaf-config.version>0.1.0</leaf-config.version>
@@ -36,6 +34,7 @@
         <leaf-modeling.version>0.1.0</leaf-modeling.version>
         <leaf-oerm.version>0.1.0</leaf-oerm.version>
         <leaf-release.version>${project.version}</leaf-release.version>
+        <leaf-security.version>0.1.0</leaf-security.version>
         <leaf-service.version>0.1.0</leaf-service.version>
     </properties>
 
