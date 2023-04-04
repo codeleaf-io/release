@@ -23,8 +23,8 @@
         <git.repo>${project.artifactId}</git.repo>
         <git.version>${project.version}</git.version>
 
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
 
         <leaf-build.version>${project.parent.version}</leaf-build.version>
         <leaf-common.version>0.1.0</leaf-common.version>
