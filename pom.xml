@@ -5,12 +5,12 @@
     <parent>
         <groupId>io.codeleaf.build</groupId>
         <artifactId>build-release</artifactId>
-        <version>0.1.0</version>
+        <version>0.9.0</version>
     </parent>
 
     <groupId>io.codeleaf.release</groupId>
     <artifactId>release</artifactId>
-    <version>0.1.0</version>
+    <version>0.9.0</version>
 
     <packaging>pom</packaging>
 
@@ -23,19 +23,19 @@
         <git.repo>${project.artifactId}</git.repo>
         <git.version>${project.version}</git.version>
 
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
         <leaf-build.version>${project.parent.version}</leaf-build.version>
-        <leaf-common.version>0.1.0</leaf-common.version>
-        <leaf-config.version>0.1.0</leaf-config.version>
-        <leaf-expose.version>0.1.0</leaf-expose.version>
-        <leaf-logging.version>0.1.0</leaf-logging.version>
-        <leaf-modeling.version>0.1.0</leaf-modeling.version>
-        <leaf-oerm.version>0.1.0</leaf-oerm.version>
+        <leaf-common.version>0.9.0</leaf-common.version>
+        <leaf-config.version>0.9.0</leaf-config.version>
+        <leaf-expose.version>0.9.0</leaf-expose.version>
+        <leaf-logging.version>0.9.0</leaf-logging.version>
+        <leaf-modeling.version>0.9.0</leaf-modeling.version>
+        <leaf-oerm.version>0.9.0</leaf-oerm.version>
         <leaf-release.version>${project.version}</leaf-release.version>
-        <leaf-security.version>0.1.0</leaf-security.version>
-        <leaf-service.version>0.1.0</leaf-service.version>
+        <leaf-security.version>0.9.0</leaf-security.version>
+        <leaf-service.version>0.9.0</leaf-service.version>
     </properties>
 
     <licenses>
